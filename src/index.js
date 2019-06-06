@@ -73,6 +73,78 @@
 // console.log('=============');
 
 // console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
+// console.log('________________________________________________________________');
 // console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 
 // console.log('=============');
+
+// import { any, callback } from './array-practice/task1';
+// console.log(any([0, 1, 2, 0], x => x >= 2));
+// console.log(any([0, 0, 1, 0]));
+// console.log(any([0, 0, 0, 0]));
+
+// console.log('=============');
+
+// import { arrayDiff } from './array-practice/task2';
+// console.log(arrayDiff([1, 2, 3, 2], [1, 2, 4]));
+// console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4']));
+
+// console.log('=============');
+
+// import { forEachRight } from './array-practice/task3';
+// forEachRight([1, 2, 3, 4], val => console.log(val));
+
+// console.log('=============');
+
+// import { union } from './array-practice/task4';
+// console.log(union([5, 1, 2, 3, 3], [4, 3, 2]));
+// console.log(union([5, 1, 3, 3, 4], [1, 3, 4]));
+
+// console.log('=============');
+
+// import { createGenerator } from './array-practice/task5';
+// const generator = createGenerator([1, '6', 3, 2]);
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+// console.log('=============');
+
+// import { transformArrayToNumber } from './array-practice/task6';
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item));
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10));
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item));
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1));
+// console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item));
+
+// console.log('=============');
+
+// import { take } from './array-practice/task7';
+// console.log(take([1, 2, 3], 5));
+// console.log(take([1, 2, 3], 2));
+
+// console.log('=============');
+
+// import { without } from './array-practice/task8';
+// console.log(without([2, 1, 2, 3], 1, 2));
+// console.log(without([2, 1, 10, 20], 1, 2));
+
+// console.log('=============');
+
+// import { indexOfAll } from './array-practice/task9';
+// console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1));
+// console.log(indexOfAll([1, 2, 3], 4));
+
+// console.log('=============');
+
+// import { membersOnActiveMeetups } from './array-practice/task10';
+// const meetups = [
+// 	{ name: 'JavaScript', isActive: true, members: 100 },
+// 	{ name: 'Angular', isActive: true, members: 900 },
+// 	{ name: 'Node', isActive: false, members: 600 },
+// 	{ name: 'React', isActive: true, members: 500 },
+// ];
+// console.log(membersOnActiveMeetups(meetups));

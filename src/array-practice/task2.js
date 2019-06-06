@@ -15,3 +15,17 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+export function arrayDiff(arr1, arr2) {
+	let mySet = new Set(arr1);
+	let mySet2 = new Set(arr2);
+	let merged = [...mySet, ...mySet2];
+	let mySet3 = new Set();
+	merged.forEach(element => {
+		if (mySet3.has(element)) {
+			mySet3.delete(element);
+		} else {
+			mySet3.add(element);
+		}
+	});
+	return [...mySet3];
+}

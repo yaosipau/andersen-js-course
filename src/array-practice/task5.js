@@ -13,3 +13,15 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+export function createGenerator(array) {
+	return {
+		next: function() {
+			if (array[0]) {
+				return array.shift();
+			} else {
+				return 'Complete!';
+			}
+		},
+	};
+}

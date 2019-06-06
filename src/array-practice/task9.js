@@ -10,3 +10,13 @@
  * console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); -> [0, 3]
  * console.log(indexOfAll([1, 2, 3], 4)); -> []
  */
+
+export function indexOfAll(array, elem) {
+	let newArray = [];
+	let index = array.indexOf(elem);
+	while (index != -1) {
+		newArray.push(index);
+		index = array.indexOf(elem, index + 1);
+	}
+	return newArray;
+}
