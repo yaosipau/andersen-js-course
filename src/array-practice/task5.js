@@ -13,3 +13,12 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+export function createGenerator(array) {
+	let myArray = array.slice();
+	return {
+		next: function() {
+			return myArray.length > 0 ? myArray.shift() : 'Complete!';
+		},
+	};
+}

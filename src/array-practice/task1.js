@@ -14,3 +14,7 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+export function any(array, callback = x => x >= 1) {
+	return array.some(callback);
+}
