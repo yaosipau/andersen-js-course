@@ -16,6 +16,5 @@
  */
 
 export function any(array, callback = x => x >= 1) {
-	let result = array.map(callback);
-	return result.includes(true);
+	return array.some(callback);
 }

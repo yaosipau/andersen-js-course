@@ -40,12 +40,10 @@ export function task4New() {
     bar() {
       return x + y;
     },
+    [`baz${foo()}`]: 'new field',
   };
   function foo() {
     return 'test';
   }
-
-  obj[`baz${foo()}`] = 'new field';
-
   return obj;
 }

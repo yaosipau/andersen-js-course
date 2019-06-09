@@ -15,9 +15,10 @@
  */
 
 export function createGenerator(array) {
+	let myArray = array.slice();
 	return {
 		next: function() {
-			return array.length > 0 ? array.shift() : 'Complete!';
+			return myArray.length > 0 ? myArray.shift() : 'Complete!';
 		},
 	};
 }

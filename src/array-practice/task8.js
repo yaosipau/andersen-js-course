@@ -13,6 +13,5 @@
 
  */
 export function without(array, ...mas) {
-	let myArray = array.filter(i => !mas.includes(i));
-	return myArray;
+	return array.filter(i => !mas.includes(i));
 }

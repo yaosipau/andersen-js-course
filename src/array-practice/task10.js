@@ -18,5 +18,5 @@
 // ];
 
 export function membersOnActiveMeetups(meetups) {
-	return meetups.filter(meetup => meetup.isActive == true).reduce((a, b) => a + b.members, 0);
+	return meetups.filter(meetup => meetup.isActive).reduce((a, b) => a + b.members, 0);
 }
