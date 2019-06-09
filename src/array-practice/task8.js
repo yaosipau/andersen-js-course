@@ -10,18 +10,9 @@
  *
  * console.log(without([2, 1, 2, 3], 1, 2)) -> [3]
  * console.log(without([2, 1, 10, 20], 1, 2)) -> [10, 20]
+
  */
 export function without(array, ...mas) {
-	let mySet = new Set(array);
-	let mySet2 = new Set(mas);
-	let merged = [...mySet, ...mySet2];
-	let mySet3 = new Set();
-	merged.forEach(element => {
-		if (mySet3.has(element)) {
-			mySet3.delete(element);
-		} else {
-			mySet3.add(element);
-		}
-	});
-	return [...mySet3];
+	let myArray = array.filter(i => !mas.includes(i));
+	return myArray;
 }

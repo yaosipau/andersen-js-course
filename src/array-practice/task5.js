@@ -17,11 +17,7 @@
 export function createGenerator(array) {
 	return {
 		next: function() {
-			if (array[0]) {
-				return array.shift();
-			} else {
-				return 'Complete!';
-			}
+			return array.length > 0 ? array.shift() : 'Complete!';
 		},
 	};
 }

@@ -13,10 +13,6 @@
 
 export function indexOfAll(array, elem) {
 	let newArray = [];
-	let index = array.indexOf(elem);
-	while (index != -1) {
-		newArray.push(index);
-		index = array.indexOf(elem, index + 1);
-	}
+	array.forEach((el, index) => (el === elem ? newArray.push(index) : null));
 	return newArray;
 }

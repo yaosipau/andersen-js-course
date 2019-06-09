@@ -19,9 +19,6 @@ export function task9Old() {
 
 export function task9New() {
 	let result = 'test'.includes('est');
-	let findResult = [22, 1, 90, 70].reduce(function(acc, curr) {
-		return acc < 3 ? acc : curr;
-	});
-
+	let findResult = [22, 1, 90, 70].find(elem => elem < 3);
 	return [result, findResult];
 }

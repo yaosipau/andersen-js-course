@@ -8,8 +8,6 @@
  * console.log(union([5, 1, 3, 3, 4], [1, 3, 4])); -> [5, 1, 3, 4]
  */
 export function union(arr1, arr2) {
-	let mySet = new Set(arr1);
-	let mySet2 = new Set(arr2);
-	let mySet3 = new Set([...mySet, ...mySet2]);
-	return [...mySet3];
+	let mySet = new Set([...arr1, ...arr2]);
+	return [...mySet];
 }

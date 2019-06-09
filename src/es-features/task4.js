@@ -35,13 +35,12 @@ export function task4New() {
   let y = 20;
 
   const obj = {
-    x: x,
-    y: y,
-    bar: function() {
+    x,
+    y,
+    bar() {
       return x + y;
     },
   };
-
   function foo() {
     return 'test';
   }

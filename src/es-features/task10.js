@@ -73,7 +73,7 @@ class NewB extends NewA {
   getAge() {
     return this.age;
   }
-  defaultUser() {
+  static defaultUser() {
     return new NewB('test', 0);
   }
   get color() {
@@ -87,7 +87,7 @@ export function task10New() {
   const max = new NewB('Max', 12);
   console.log(max.getName('Best'));
   console.log(max.getAge());
-  console.log(max.defaultUser());
+  console.log(NewB.defaultUser());
   max.color = 'red';
   console.log(max.color);
   return max;

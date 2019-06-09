@@ -18,11 +18,5 @@
 // ];
 
 export function membersOnActiveMeetups(meetups) {
-	let filtered = meetups.filter(function(obj) {
-		return obj.isActive == true;
-	});
-	let val = filtered.reduce(function(a, b) {
-		return { members: a.members + b.members };
-	});
-	return val.members;
+	return meetups.filter(meetup => meetup.isActive == true).reduce((a, b) => a + b.members, 0);
 }

@@ -15,12 +15,7 @@
  * console.log(any([0, 0, 0, 0])); -> false
  */
 
-export function any(array, callback) {
-	let result;
-	if (callback) {
-		result = array.map(callback);
-	} else {
-		result = array.map(x => x == true);
-	}
-	return result.reduce((acc, curr) => acc || curr);
+export function any(array, callback = x => x >= 1) {
+	let result = array.map(callback);
+	return result.includes(true);
 }
