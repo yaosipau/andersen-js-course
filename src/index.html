@@ -1,14 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Andersen JS Course</title>
   </head>
   <body>
-    <h1>
-      Andersen JS Course
-    </h1>
+    <main id="app">
+      <div id="recipeList">
+        <h1>Recipe list</h1>
+        <ul id="recipe-list">
+          <li class="recipe-item" draggable="true" data-id="sandwich-recipe">
+            <label class="title">Sandwich</label>
+            <span>meat</span>
+            <span>cheese</span>
+            <span>bread</span>
+            <button class="remove">delete</button>
+          </li>
+          <li class="recipe-item" draggable="true" data-id="salad-recipe">
+            <label class="title">Salad</label>
+            <span>cucumber</span>
+            <span>tomato</span>
+            <span>onion</span>
+            <button class="remove">delete</button>
+          </li>
+          <li class="recipe-item" draggable="true" data-id="sauce-recipe">
+            <label class="title">Sauce</label>
+            <span>tomato</span>
+            <span></span>
+            <span></span>
+            <button class="remove">delete</button>
+          </li>
+        </ul>
+        <form id="recipe-form">
+          <label>Add new recipe here</label>
+          <input id="recipe-input" type="text" autocomplete="off" placeholder="recipe name" />
+          <input id="recipe-input1" type="text" autocomplete="off" placeholder="ingredient #1" />
+          <input id="recipe-input2" type="text" autocomplete="off" placeholder="ingredient #2" />
+          <input id="recipe-input3" type="text" autocomplete="off" placeholder="ingredient #3" />
+          <button id="recipe-button" type="submit">add</button>
+        </form>
+      </div>
+      <div id="workDesk">
+        <h1>Work desk</h1>
+        <ul id="work-list"></ul>
+        <button id="craft-button" class="craft" type="button">craft</button>
+      </div>
+      <div id="ingredientList">
+        <h1>Ingredient list</h1>
+        <ul id="ingredient-list">
+          <li class="ingredient-item" draggable="true" data-id="meat">
+            <label class="title">Meat</label>
+            <button class="remove">delete</button>
+          </li>
+          <li class="ingredient-item" draggable="true" data-id="cheese">
+            <label class="title">Cheese</label>
+            <button class="remove">delete</button>
+          </li>
+          <li class="ingredient-item" draggable="true" data-id="bread">
+            <label class="title">Bread</label>
+            <button class="remove">delete</button>
+          </li>
+          <li class="ingredient-item" draggable="true" data-id="cucumber">
+            <label class="title">Cucumber</label>
+            <button class="remove">delete</button>
+          </li>
+          <li class="ingredient-item" draggable="true" data-id="tomato">
+            <label class="title">Tomato</label>
+            <button class="remove">delete</button>
+          </li>
+          <li class="ingredient-item" draggable="true" data-id="onion">
+            <label class="title">Onion</label>
+            <button class="remove">delete</button>
+          </li>
+          <li class="ingredient-item" draggable="true" data-id="sandwich">
+            <label class="title">Sandwich</label>
+            <button class="remove">delete</button>
+          </li>
+        </ul>
+        <form id="ingredient-form">
+          <label>Add new ingredient here</label>
+          <input
+            id="ingredient-input"
+            type="text"
+            autocomplete="off"
+            placeholder="ingredient name"
+          />
+          <button id="ingredient-button" type="submit">add</button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
