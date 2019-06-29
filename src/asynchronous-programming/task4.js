@@ -6,7 +6,8 @@ export function getData() {
   return fetch('http://www.json-generator.com/api/json/get/cfQCylRjuG')
     .then(response => response.json())
     .then(myBool => {
-      if (myBool.getUsersData) {
+      const { getUsersData } = myBool;
+      if (getUsersData) {
         fetch('http://www.json-generator.com/api/json/get/cfVGucaXPC')
           .then(response => response.json())
           .then(myData => console.log(myData));

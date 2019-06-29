@@ -1,3 +1,4 @@
+/* eslint-disable no-return-await */
 /* eslint-disable func-names */
 /* eslint-disable no-console */
 /* eslint-disable import/prefer-default-export */
@@ -9,7 +10,6 @@ export class Musician {
 
   async getAlbums() {
     const response = await fetch(this.albumsUrl);
-    const data = await response.json();
-    return data;
+    return await response.json();
   }
 }

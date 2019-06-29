@@ -15,7 +15,8 @@ export async function myFoo(url) {
   try {
     const response = await getUsers(url);
     const data = await response.json();
-    console.log(data[0]);
+    const [user] = data;
+    console.log(user);
   } catch (err) {
     console.log('Error!', err);
   }

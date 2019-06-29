@@ -10,22 +10,15 @@ const urls = [
 ];
 
 export function getDataSequence() {
-  const array = [];
+  const arr = [];
   urls.reduce(
-    (arr, url) => [
-      ...arr,
-      fetch(url)
-        .then(response => response.json())
-        .then(data => array.push(data)),
-    ],
-    []
+    (acc, url) => acc.then(fetch(url).then(res => res.json().then(data => arr.push(data)))),
+    Promise.resolve()
   );
-  return console.log(array);
+  console.log(arr);
 }
-
 export function getDataParallel() {
   Promise.all(urls.map(url => fetch(url)))
     .then(responses => Promise.all(responses.map(response => response.json())))
-    .then(myData => myData.reduce((arr, elem) => [...arr, elem], []))
     .then(list => console.log(list));
 }

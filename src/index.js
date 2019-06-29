@@ -1,3 +1,5 @@
-import './styles/main.css';
+/* eslint-disable no-console */
+import { getDataSequence, getDataParallel } from './asynchronous-programming/task5';
 
-console.log('Hi');
+getDataSequence();
+getDataParallel();
